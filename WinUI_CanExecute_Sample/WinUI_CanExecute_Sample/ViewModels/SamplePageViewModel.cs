@@ -21,6 +21,10 @@ namespace WinUI_CanExecute_Sample.ViewModels
             }
         }
 
+        [ObservableProperty]
+        [AlsoNotifyCanExecuteFor("Button2ClickCommand")]
+        private string _myText2 = "";
+
         public SamplePageViewModel()
         {
         }
@@ -33,6 +37,18 @@ namespace WinUI_CanExecute_Sample.ViewModels
 
         [ICommand(CanExecute = "ButtonClickCanExecute")]
         public async Task ButtonClickAsync()
+        {
+
+        }
+
+        private bool Button2ClickCanExecute()
+        {
+            //can execute logic
+            return MyText2.Length>0;
+        }
+
+        [ICommand(CanExecute = "Button2ClickCanExecute")]
+        public async Task Button2ClickAsync()
         {
 
         }

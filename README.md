@@ -37,6 +37,28 @@ public async Task ButtonClickAsync()
 
 
 
+#### ObservableProperty
+
+###### Code Generator
+
+
+
+How to trigger CanExecute on ProperyChanged event:
+
+```c#
+[ObservableProperty]
+[AlsoNotifyCanExecuteFor("Button2ClickCommand")]
+private string _myText2 = "";
+```
+
+
+
+#### ObservableProperty
+
+###### Full Property
+
+
+
 How to trigger CanExecute on ProperyChanged event:
 
 ```c#

@@ -16,9 +16,19 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Text="{Binding MyText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <Button Grid.Row="2" Margin="0,0,0,10" Content="Click Me" Command="{Binding ButtonClickCommand,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="ObservableProperty(Full property)"/>
+        <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding MyText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Grid.Row="3" Grid.Column="0" Margin="0,0,0,10" Content="Click Me" Command="{Binding ButtonClickCommand}"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="ObservableProperty(Code Generator)"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding MyText2,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Grid.Row="3" Grid.Column="2" Margin="0,0,0,10" Content="Click Me" Command="{Binding Button2ClickCommand}"/>
     </Grid>
 </Page>
