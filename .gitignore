@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.vs/
+
+WinUI_CanExecute_Sample/WinUI_CanExecute_Sample (Package)/bin/
+
+WinUI_CanExecute_Sample/WinUI_CanExecute_Sample (Package)/obj/
+
+WinUI_CanExecute_Sample/WinUI_CanExecute_Sample/bin/
+
+WinUI_CanExecute_Sample/WinUI_CanExecute_Sample/obj/

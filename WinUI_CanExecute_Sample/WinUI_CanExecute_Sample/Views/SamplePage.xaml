@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="WinUI_CanExecute_Sample.Views.SamplePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:WinUI_CanExecute_Sample.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <viewmodels:SamplePageViewModel x:Name="ViewModel" />
+    </Page.DataContext>
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Text="{Binding MyText,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Grid.Row="2" Margin="0,0,0,10" Content="Click Me" Command="{Binding ButtonClickCommand,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+</Page>
